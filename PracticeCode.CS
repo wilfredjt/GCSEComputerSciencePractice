@@ -7,6 +7,7 @@ namespace Main
   using Exta;
   using verification;
   using arrays;
+  using sorting;
   class MainCode
    {
      
@@ -23,6 +24,7 @@ namespace Main
        string[] data2 = {Console.ReadLine(),Console.ReadLine()};
        simplepassword.checker(data2);
        array.array1d();
+       sort.linear();
        
      }
    }
@@ -105,6 +107,61 @@ namespace arrays
       
       
       
+    }
+  }
+}
+namespace sorting
+{
+  class sort
+  {
+    
+    
+    public static void linear()
+    {
+      int[] numbers = new int[] {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100};
+      Console.WriteLine("What is your number");
+      int toFind = Int32.Parse(Console.ReadLine());
+      int posttion = 0;
+      int length = numbers.Length;
+      while(posttion<length&&numbers[posttion] != toFind)
+      {
+        posttion++;
+        
+      }
+      if (posttion>=length)
+      {
+        Console.WriteLine("Your number cant be found!");
+        
+      }
+      else
+      {
+        Console.WriteLine("we have found your number at position " + posttion);
+      }
+      
+    }
+    public static void binary()
+    {
+      int[] numbers = new int[] {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100};
+      int length = numbers.length;
+      Console.WriteLine("What is your number");
+      int toFind = Int32.Parse(Console.ReadLine());
+      int lowerbound = 0;
+      int upperboud = length -1;
+      bool match = false;
+      while(match == false && lowerbound != upperboud)
+      {
+        int midpoint = ((lowerbound + upperboud)/2);
+        if (numbers[midpoint] == toFind)
+        {
+          Console.WriteLine("We found you rnumber at " + midpoint);
+          match = true;
+          
+        }
+        else if (numers[midpoint]<toFind)
+        {
+          
+        }
+      }
     }
   }
 }

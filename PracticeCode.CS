@@ -1,4 +1,4 @@
-// A set of tasks for revising GCSE computer science
+// Demonstration of some simple loops that will be tested on.
 using System;
 using System.IO;
 namespace Main
@@ -6,6 +6,7 @@ namespace Main
   using Loops;
   using Exta;
   using verification;
+  using arrays;
   class MainCode
    {
      
@@ -21,6 +22,7 @@ namespace Main
        Console.WriteLine("Enter your username, then press enter, then password, then enter");
        string[] data2 = {Console.ReadLine(),Console.ReadLine()};
        simplepassword.checker(data2);
+       array.array1d();
        
      }
    }
@@ -89,4 +91,20 @@ namespace verification
     }
   }
   
+}
+namespace arrays
+{
+  class array
+  {
+    public static void array1d()
+    {
+      string[] animalname = new string [] {"Spot","Dylan","Fido"};
+      foreach(string a in animalname){
+        Console.WriteLine(a);
+      }
+      
+      
+      
+    }
+  }
 }

@@ -146,14 +146,14 @@ namespace sorting
       Console.WriteLine("What is your number");
       int toFind = Int32.Parse(Console.ReadLine());
       int lowerbound = 0;
-      int upperboud = length -1;
+      int upperbound = length -1;
       bool match = false;
-      while(match == false && lowerbound != upperboud)
+      while(match == false && lowerbound != upperbound)
       {
-        int midpoint = ((lowerbound + upperboud)/2);
+        int midpoint = ((lowerbound + upperbound)/2);
         if (numbers[midpoint] == toFind)
         {
-          Console.WriteLine("We found you rnumber at " + midpoint);
+          Console.WriteLine("We found your number at " + midpoint);
           match = true;
           
         }
